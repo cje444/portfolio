@@ -359,7 +359,7 @@ p {
 
 .project:hover .project__description {
   opacity: 0.8;
-  transform: translateY(0px);
+  transform: translateY(10px);
 }
 .project__description h3 {
   color: white;
@@ -375,4 +375,47 @@ p {
   left: 50%;
   margin-left: -12px;
   margin-top: 8px;
+}
+
+/* Testmonial */
+
+#testmonials {
+  background-color: var(--color-dark-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speach-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speach-bubble p {
+  color: var(--color-light-gray);
+}
+
+.testimonial__speach-bubble a {
+  color: var(--color-dark-orange);
 }
