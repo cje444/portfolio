@@ -88,14 +88,34 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #ff8e34;
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
+  padding-left: 10px;
+  transition: all var(--animation-duration) ease-in;
 }
+
+#navbar.navbar__dark {
+  background-color: var(--color-dark-orange);
+  padding: 8px;
+}
+
 .navbar__menu {
   display: flex;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  top: 20px;
+  right: 32px;
+  display: none;
 }
 .navbar__logo {
   font-size: medium;
@@ -127,6 +147,7 @@ p {
 #home {
   background: url(images/background.jpeg) center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 
@@ -440,4 +461,42 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: colum;
+    align-items: center;
+    height: 69px;
+  }
+  .navbar__logo {
+    padding: 20px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
