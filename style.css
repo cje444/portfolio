@@ -543,6 +543,11 @@ p {
     flex-grow: 1;
   }
 
+  .category__btn {
+    margin: 4px;
+    width: 100%;
+  }
+
   .testimonial {
     flex-direction: column;
     align-items: center;
@@ -552,9 +557,16 @@ p {
     height: 80px;
   }
 
-  .testimonial__speech-bubble {
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speach-bubble {
     order: 1;
   }
+
   .arrow-up {
     width: 50px;
     height: 50px;
